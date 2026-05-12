@@ -1,0 +1,91 @@
+.product-grid-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5rem 2rem 2rem;
+}
+
+.pg-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.pg-subtitle {
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.pg-controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.pg-search {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-main);
+  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
+  width: 220px;
+  transition: border-color 0.2s;
+}
+
+.pg-search::placeholder { color: var(--text-muted); }
+.pg-search:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.pg-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.pg-filter-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  transition: all 0.2s;
+  text-transform: capitalize;
+}
+
+.pg-filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--text-main);
+}
+
+.pg-filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.pg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.pg-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-muted);
+}
+
+.pg-empty strong {
+  color: var(--text-main);
+}

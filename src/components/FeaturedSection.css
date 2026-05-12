@@ -1,0 +1,101 @@
+.featured-section {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 5rem 2rem;
+}
+
+.featured-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.featured-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.featured-desc {
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 500px;
+  margin: 1rem auto 0;
+  line-height: 1.7;
+}
+
+.featured-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.feat-card {
+  background: var(--bg-dark);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.feat-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(232,24,26,0.05) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.feat-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(232,24,26,0.1);
+}
+
+.feat-card:hover::before { opacity: 1; }
+
+.feat-icon {
+  font-size: 2.5rem;
+}
+
+.feat-count {
+  align-self: flex-start;
+}
+
+.feat-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: var(--text-main);
+}
+
+.feat-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.feat-arrow {
+  font-family: var(--font-ui);
+  font-size: 1.4rem;
+  color: var(--primary);
+  transition: transform 0.2s;
+  align-self: flex-end;
+}
+
+.feat-card:hover .feat-arrow {
+  transform: translateX(6px);
+}
+
+@media (max-width: 768px) {
+  .featured-cards {
+    grid-template-columns: 1fr;
+  }
+}
